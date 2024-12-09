@@ -233,7 +233,7 @@ load_cadd_exac = function(reload=F) {
     print('Downloading CADD data...')
     ret = system('bgzip')
     gzip_type = ifelse(ret <= 1, 'b', '')
-    system(paste0("curl http://krishna.gs.washington.edu/download/CADD/v1.3/ExAC_r0.3.tsv.gz | zcat | sed '1d' | ", gzip_type, "gzip -c > data/ExAC.r0.3.tsv.gz"))
+    system(paste0("curl https://krishna.gs.washington.edu/download/CADD/v1.3/ExAC_r0.3.tsv.gz | zcat | sed '1d' | ", gzip_type, "gzip -c > data/ExAC.r0.3.tsv.gz"))
   } else {
     print('Using locally loaded CADD file. Run exac = load_cadd_exac(reload=T) to update to newest file.')
   }

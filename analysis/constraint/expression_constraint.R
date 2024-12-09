@@ -139,6 +139,7 @@ plot_expression_constraint = function(gtex, tissues, title=F, save_plot=T) {
   list2 <- split(data,gtex$mis_cut)
   list3 <- split(data,gtex$lof_phi_cut)
   # Plot data
+  browser()
   myvioplot(list1,list2,list3,color_syn,color_mis,color_lof,1.25) 
   # Add axes
   axis(2,at=seq(0,40,5),las=2,lwd=0,lwd.tick=1,line=0.25)

@@ -135,7 +135,7 @@ plot_category_stats_constraint = function(categories, categories_detail, save_pl
       polygon(c(xvals, rev(xvals)), c(x$lower95, rev(x$upper95)), col = alpha(this_cat$k, 0.2), border = NA)
     }
   })
-  
+  browser()
   # Additional legends
   par(xpd=NA)
   delta_delta = ifelse(save_plot, 0.04, 0.1)
